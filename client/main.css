@@ -1,5 +1,24 @@
 body {
-  background-color: #faf8f1;
   color: #0a1520;
   font-family: 'Poppins', sans-serif;
+  background-image: url('/troopss/clash-royale-blue-king-89rmqzt7a13z8l45.jpg');
+}
+.header {
+  text-align: center;
+}
+.trooopps {
+  width: 4%;
+  height: 4%;
+}
+.deck1 {
+  width: 20%;
+  height: 20%;
+  float: left;
+  padding: 1em;
+}
+.deck2 {
+  width: 20%;
+  height: 20%;
+  float: right;
+   padding: 1em;
 }
