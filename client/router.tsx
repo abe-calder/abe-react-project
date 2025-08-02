@@ -6,12 +6,14 @@ import {
 
 import App from './components/App'
 import Home from './components/Home'
-import TroopDisplay from './components/TroopDisplay'
+import CommonTroopDisplay from './components/TroopsDisplay/CommonTroopDisplay'
+import RareTroopDisplay from './components/TroopsDisplay/RareTroopsDisplay'
 
 const routes = createRoutesFromElements(
   <Route path="/" element={<App />}>
     <Route index element={<Home />} />
-    <Route path="/:troopName" element={<TroopDisplay />} />
+    <Route path="/troops/common" element={<CommonTroopDisplay />} />
+    <Route path='/:troops/rare' element={<RareTroopDisplay />} />
   </Route>,
 )
 

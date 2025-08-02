@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router'
+import Navbar from './Navbar'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <img className='deck2' src='public/troopss/deck-builder-v0-6evmnm1ventd1.jpg' alt='image-of-game-deck-builder'></img>
       </div>
       <div className='main'>
+        <Navbar/>
         <Outlet />
       </div>
     </div>
