@@ -1,7 +1,7 @@
 import data from '../../../data/Rare-Troops.ts'
 
 function RareTroopDisplay() {
-  console.log(data)
+  data
   return (
     <>
       <div>
