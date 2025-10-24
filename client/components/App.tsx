@@ -1,7 +1,6 @@
 import { Outlet } from 'react-router'
 import Navbar from './Navbar'
-import { GetIncomeTaxRate } from './calc'
-GetIncomeTaxRate(250000, 0, 0, false, 0)
+
 function App() {
   return (
     <div className='main'>

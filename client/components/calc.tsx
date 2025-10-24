@@ -74,7 +74,7 @@ export function GetIncomeTaxRate(
 
   }
 
-  console.log(totalIncome)
+ 
   studentLoanBool === true && totalIncome >= 5000
     ? (studentLoanDeduction = totalIncome * 0.12)
     : (studentLoanDeduction = 0)
