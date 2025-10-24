@@ -1,6 +1,10 @@
 import { Outlet } from 'react-router'
 import Navbar from './Navbar'
+import { getIncomeTaxRate } from './refactoredCalc'
 
+
+
+console.log(getIncomeTaxRate(70000, 20000, 0, false, 0 ))
 function App() {
   return (
     <div className='main'>
