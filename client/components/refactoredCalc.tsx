@@ -55,9 +55,6 @@ export function getIncomeTaxRate(
   const totalDeductions = taxDeductions + kiwiSaverDeduction + studentLoanDeductions
   const takeHomePay = totalIncome - totalDeductions
 
-  // console.log(`Take Home pay is: ${takeHomePay.toFixed(2)}`, `Total Deductions are: ${totalDeductions.toFixed(2)}`, `Tax Deductions are: ${taxDeductions}`)
-
-
   return { totalDeductions, takeHomePay, isStudentLoan, studentLoanDeductions, kiwiSaverDeduction, totalIncome, taxDeductions }
 
 }
