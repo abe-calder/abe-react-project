@@ -4,7 +4,7 @@
 // $78,101 - $180,000	33%
 // $180,001 and over	39%
 
-const brackets = [
+const taxBrackets = [
   { threshold: 180000, rate: 0.39 },
   { threshold: 78100, rate: 0.33 },
   { threshold: 53500, rate: 0.30 },
@@ -38,7 +38,7 @@ export function getIncomeTaxRate(
   const STUDENT_LOAN_THRESHOLD = 24128
   const studentLoanDeductionRate = 0.12
 
-  for (const bracket of brackets) {
+  for (const bracket of taxBrackets) {
     if (incomeToTax > bracket.threshold) {
       const amountInBracket = incomeToTax - bracket.threshold
       taxDeductions += amountInBracket * bracket.rate
