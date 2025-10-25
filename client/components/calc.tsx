@@ -14,7 +14,7 @@ export function GetIncomeTaxRate(
   let totalIncome: number = 0
   let taxableOtherIncome: number = 0
   const nonTaxableOtherIncome: number = 0
-  let taxDeductions: number
+  let taxDeductions: number = 0
   let studentLoanDeduction: number
   let totalDeductions: number = 0
 
