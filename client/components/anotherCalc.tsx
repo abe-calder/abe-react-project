@@ -10,8 +10,8 @@ interface CalculationResult {
   totalDeductions: number, 
   takeHomePay: number, 
   isStudentLoan: boolean
-  studentLoanTotalDeductions: number, 
-  kiwiSaverDeduction: number,
+  studentLoanDeductions: number, 
+  kiwisaverDeductions: number,
   totalIncome: number,
   taxDeductions: number,
 }
@@ -23,7 +23,6 @@ export function getIncomeTaxRate(
   studentLoanBool: boolean,
   kiwisaverContribution: number,
 ): CalculationResult {
-  let kiwisaverDeduction = 0
   let taxDeductions = 0
 
   const STUDENT_LOAN_THRESHOLD = 24128
@@ -53,6 +52,10 @@ export function getIncomeTaxRate(
   }
 
   const totalDeductions = taxDeductions + studentLoanDeductions + kiwisaverDeductions
+  const takeHomePay = totalIncome - totalDeductions
+  const isStudentLoan = studentLoanBool
+
+
 
   return {
 
