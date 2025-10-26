@@ -16,7 +16,7 @@ interface CalculationResult {
   taxDeductions: number,
 }
 
-export function getIncomeTaxRate(
+export function anotherGetIncomeRateCalc(
   anualSalary: number,
   otherIncome: number,
   expenses: number,
@@ -37,7 +37,6 @@ export function getIncomeTaxRate(
 
   for (let i = 0; i < taxBrackets.length ; i++) {
     const bracket = taxBrackets[i]
-
     if (totalIncome > bracket.threshold) {
       const valueInBracket = incomeToTax - bracket.threshold
       taxDeductions += valueInBracket * bracket.rate
@@ -45,10 +44,8 @@ export function getIncomeTaxRate(
     }
   }
 
-  if (studentLoanBool === true) {
-    if (incomeToTax > STUDENT_LOAN_THRESHOLD) {
-      studentLoanDeductions += incomeToTax * studentLoanDeductionRate
-    }
+  if (studentLoanBool == true && totalIncome < STUDENT_LOAN_THRESHOLD) {
+      studentLoanDeductions += totalIncome * studentLoanDeductionRate
   }
 
   const totalDeductions = taxDeductions + studentLoanDeductions + kiwisaverDeductions
@@ -58,7 +55,13 @@ export function getIncomeTaxRate(
 
 
   return {
-
+    totalDeductions,
+    takeHomePay,
+    totalIncome,
+    taxDeductions,
+    isStudentLoan,
+    studentLoanDeductions,
+    kiwisaverDeductions,
   }
 
   

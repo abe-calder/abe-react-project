@@ -1,10 +1,10 @@
 import { Outlet } from 'react-router'
 import Navbar from './Navbar'
-import { getIncomeTaxRate } from './refactoredCalc'
+import { anotherGetIncomeRateCalc } from './anotherCalc'
 
 
 
-console.log(getIncomeTaxRate(70000, 20000, 0, false, 0 ))
+console.log(anotherGetIncomeRateCalc(70000, 5000, 900, true, 8 ))
 function App() {
   return (
     <div className='main'>
