@@ -28,6 +28,7 @@ export function anotherGetIncomeRateCalc(
   const STUDENT_LOAN_THRESHOLD = 24128
   const studentLoanDeductionRate = 0.12
   let studentLoanDeductions = 0
+  
 
   const totalIncome = anualSalary + otherIncome - expenses
 
