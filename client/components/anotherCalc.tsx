@@ -29,7 +29,6 @@ export function anotherGetIncomeRateCalc(
   const studentLoanDeductionRate = 0.12
   let studentLoanDeductions = 0
   
-
   const totalIncome = anualSalary + otherIncome - expenses
 
   let incomeToTax = totalIncome
@@ -53,7 +52,8 @@ export function anotherGetIncomeRateCalc(
   const takeHomePay = totalIncome - totalDeductions
   const isStudentLoan = studentLoanBool
 
-
+  // fix student loan calc
+  // 
 
   return {
     totalDeductions,
